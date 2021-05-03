@@ -15,8 +15,6 @@ function App() {
   const [page, setPage] = useState(0);
   const [totalPages, setTotalPages] = useState(1);
 
-  // const [total, setTotal] = useState(-1);
-
   const fetchMoreNews = async () => {
     if (totalPages > page) {
       const response = await NewsApi.getWatchNews({
@@ -24,9 +22,8 @@ function App() {
         page: page + 1,
       });
       const { articles, total } = response;
-      console.log(response);
 
-      // mocked version
+      // mocked articles fn
       // const articles = await NewsApi.getSavedNews();
 
       const newdata = [...data, ...articles];
