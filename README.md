@@ -1,70 +1,143 @@
-# Getting Started with Create React App
+# Hodinkee Blog Clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Preview-Screens](https://github.com/hygorchristian/Music-Player-Web/blob/master/public/hodinkee.gif)
 
-## Available Scripts
+## :book: Sumary
 
-In the project directory, you can run:
+- [About this Project](https://github.com/hygorchristian/willdom-challenge#speech_balloon-about-this-project)
+- [Why?](https://github.com/hygorchristian/willdom-challenge#thinking-why)
+- [Some Observations about this App](https://github.com/hygorchristian/willdom-challenge#mag_right-some-observations-about-this-app)
+- [Links](https://github.com/hygorchristian/willdom-challenge#link-links)
+- [Features](https://github.com/hygorchristian/willdom-challenge#white_check_mark-features)
+- [Getting Started](https://github.com/hygorchristian/willdom-challenge#rocket-getting-started)
+- [Dependencies ans Tools](https://github.com/hygorchristian/willdom-challenge#gear-dependencies-ans-tools)
+- [Support tools](https://github.com/hygorchristian/willdom-challenge#wrench-support-tools)
+- [Contributing](https://github.com/hygorchristian/willdom-challenge#ok_hand-contributing)
+- [License](https://github.com/hygorchristian/willdom-challenge#book-license)
 
-### `yarn start`
+## :speech_balloon: About this Project
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The idea of the App is:
+_"Reproduce some features of the Hodinkee Blog, providing a simple way to implement the article list"._
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## :thinking: Why?
 
-### `yarn test`
+This project is challenge. I'll be happy if you could provide me any feedback about the project, code, structure or anything that you can report that could make me a better developer!
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Email-me: hygor.christian@gmail.com
 
-### `yarn build`
+Connect with me at [LinkedIn](https://www.linkedin.com/in/hygor-christian/).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Also, you can use this Project as you wish, be for study, be for make improvements or earn money with it!
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+It's free!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## :mag_right: Some Observations about this App
 
-### `yarn eject`
+1 - There's no functionality of the menu items, the buttons are only for UI matters.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## :link: Links
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+If you want to test the App in the Production mode, the links is here:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+[Hodinkee Clone](https://optimistic-benz-88f684.netlify.app/)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## :white_check_mark: Features
 
-## Learn More
+- Header
+    - Has some items, none of them are clickable
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Article List
+	- List the article with title, descriptions and an image
+	- The scroll is infinite. If you have a premium key for the [gnews.io](https://gnews.io/) API, you can see all the posts, if not the first ten posts will repeat over each request.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Footer 
+    - Has some items, none of them are clickable
 
-### Code Splitting
+## :rocket: Getting Started
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Prerequisites
 
-### Analyzing the Bundle Size
+To run this project in the development mode, you'll need to have a basic environment to run a React JS App, that can be found [here](https://pt-br.reactjs.org/docs/getting-started.html).
+You will also need and API_KEY for the [gnews.io](https://gnews.io/), you can create and account and get the key [here](https://gnews.io/register/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Installing
 
-### Making a Progressive Web App
+**Cloning the Repository**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```
+$ git clone https://github.com/hygorchristian/willdom-challenge
 
-### Advanced Configuration
+$ cd willdom-challenge
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+**Installing dependencies**
 
-### Deployment
+```
+$ yarn
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+_or_
 
-### `yarn build` fails to minify
+```
+$ npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Environment
+
+You need to put your `API_KEY` inside the `.env` file, you can create a new `.env` and just copy the structure of the `.env.example` that can be found in the root of this project.
+
+```.env
+HOST=0.0.0.0  # to run in LAN
+REACT_APP_GNEWS_API_KEY=your-api-key
+```
+
+### Running
+
+With all dependencies installed and the environment properly configured, you can now run the app:
+
+Development
+
+```
+$ yarn start
+```
+_or_
+
+```
+$ npm run start
+```
+
+Production
+
+
+```
+$ yarn build
+```
+_or_
+
+```
+$ npm run build
+```
+Then run the file located at /build/index.html
+
+## :gear: Dependencies ans Tools
+
+- [React JS](https://reactjs.org/) - A JavaScript library for building user interfaces
+- [Styled Components](https://styled-components.com/) - Visual primitives for the component age.
+- [ESlint](https://eslint.org/) - Linter
+- [Prettier](https://prettier.io/) - Code Formatter
+- [Babel](https://babeljs.io/) - JavaScript Compiler
+
+## :ok_hand: Contributing
+
+You can send how many PR's do you want, I'll be glad to analyse and accept them! And if you have any question about the project...
+
+Email-me: hygor.christian@gmail.com
+
+Connect with me at [LinkedIn](https://www.linkedin.com/in/hygor-christian/)
+
+Thank you!
+
+## :book: License
+
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/hygorchristian/willdom-challenge/blob/master/LICENSE) file for details
