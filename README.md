@@ -1,6 +1,6 @@
 # Hodinkee Blog Clone
 
-![Preview-Screens](https://github.com/hygorchristian/Music-Player-Web/blob/master/public/hodinkee.gif)
+![Preview-Screens](https://github.com/hygorchristian/willdom-challenge/blob/master/public/hodinkee.gif)
 
 ## :book: Sumary
 
