@@ -44,20 +44,24 @@ If you want to test the App in the Production mode, the links is here:
 
 ## :white_check_mark: Features
 
-- Header
-    - Has some items, none of them are clickable
+#### Header
+Has some items, none of them are clickable
 
 ![Preview-Screens](https://github.com/hygorchristian/willdom-challenge/blob/master/public/readme/header.png)
 
-- Article List
-	- List the article with title, descriptions and an image
-	- The scroll is infinite. If you have a premium key for the [gnews.io](https://gnews.io/) API, you can see all the posts, if not the first ten posts will repeat over each request.
+---
+
+#### Article List
+List the article with title, descriptions and an image.
+The scroll is infinite. If you have a premium key for the [gnews.io](https://gnews.io/) API, you can see all the posts, if not the first ten posts will repeat over each request.
 
 ![Preview-Screens](https://github.com/hygorchristian/willdom-challenge/blob/master/public/readme/list.png)
 
-- Footer 
-    - Has some items, none of them are clickable
-    
+---
+
+#### Footer
+Has some items, none of them are clickable
+
 ![Preview-Screens](https://github.com/hygorchristian/willdom-challenge/blob/master/public/readme/footer.png)
 
 ## :rocket: Getting Started
