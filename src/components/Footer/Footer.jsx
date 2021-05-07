@@ -4,10 +4,10 @@ import Container from './styles';
 
 function Footer() {
   return (
-    <Container>
+    <Container data-testid="footer">
       <section>
         <div className="groups">
-          <div className="group">
+          <div className="group" data-testid="about">
             <h2>About</h2>
             <ul>
               <li>company</li>
@@ -18,14 +18,14 @@ function Footer() {
               <li>faq</li>
             </ul>
           </div>
-          <div className="group">
+          <div className="group" data-testid="contact">
             <h2>Contact</h2>
             <ul>
               <li>Advertisement</li>
-              <li>ask us anything</li>
+              <li>Ask us anything</li>
             </ul>
           </div>
-          <div className="group">
+          <div className="group" data-testid="our-sites">
             <h2>our sites</h2>
             <ul>
               <li>hodinkee.com</li>
@@ -34,8 +34,8 @@ function Footer() {
               <li>hodinke community</li>
             </ul>
           </div>
-          <div className="group">
-            <h2>About</h2>
+          <div className="group" data-testid="social">
+            <h2>Social</h2>
             <ul>
               <li>facebook</li>
               <li>twitter</li>

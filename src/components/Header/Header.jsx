@@ -23,25 +23,29 @@ function Header() {
   });
 
   return (
-    <Container>
+    <Container data-testid="header">
       <section>
         <img className="logo" alt="HODINKEE" src="https://cdn.hodinkee.com/packs/media/images/icon-hodinkee-logo-3c35694f.svg" />
         <nav>
           <ul>
             {links.map((link) => (
-              <li key={link.pathname} className={location.pathname === link.pathname ? 'selected' : ''}>
+              <li
+                key={link.pathname}
+                className={location.pathname === link.pathname ? 'selected' : ''}
+                role={link.pathname}
+              >
                 <a href={link.pathname}>{link.label}</a>
               </li>
             ))}
           </ul>
-          <FiSearch onClick={() => setSearchOpen(true)} size={20} color="black" />
+          <FiSearch data-testid="open-search-btn" onClick={() => setSearchOpen(true)} size={20} color="black" />
         </nav>
         <div className="auth-controls">
           <span>Log In</span>
           <span>Sign Up</span>
         </div>
       </section>
-      <Search className={searchOpen ? 'open' : ''}>
+      <Search data-testid="searchbar" className={searchOpen ? 'open' : ''} data-isvisible={searchOpen}>
         <FiSearch size={20} color="black" />
         <div className="input-holder">
           <input placeholder="Search..." value={search} onChange={(e) => setSearch(e.target.value)} />
@@ -49,7 +53,7 @@ function Header() {
             Search
           </button>
         </div>
-        <button onClick={() => setSearchOpen(false)}>
+        <button data-testid="close-search-btn" onClick={() => setSearchOpen(false)}>
           <FiX size={20} color="black" />
         </button>
       </Search>
