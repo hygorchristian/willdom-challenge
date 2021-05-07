@@ -10,9 +10,7 @@ class News {
     });
   }
 
-  getNews(params) {
-    return this.api.get('search', { params });
-  }
+  getNews = (search) => this.api.get('search', { params: { q: search } });
 }
 
 export default new News();

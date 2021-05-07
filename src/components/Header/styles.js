@@ -101,13 +101,36 @@ export const Search = styled.div`
     top: 0;
   }
   
-  
-  input{
-    height: 32px;
+  .input-holder{
     flex: 1;
+    margin: 0 8px;
+    
     border-radius: 4px;
     border: 1px solid #909090;
-    margin: 0 8px;
-    padding: 0 12px;
+    height: 32px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    input{
+      height: 100%;
+      flex: 1; 
+      padding: 0 12px;     
+    }
+    
+    button{
+      height: 100%;
+      width: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+      font-weight: 500;
+      color: white;
+      background-color: #919191;
+      cursor: pointer;
+    }
   }
+  
+  
 `;

@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { FiSearch, FiX } from 'react-icons/fi';
 import { useLocation } from 'react-router-dom';
-import { useMutation } from 'react-query';
+import { useQuery } from 'react-query';
 import NewsApi from '../../services/news';
 
 import { Container, Search } from './styles';
@@ -14,18 +14,13 @@ const links = [
 function Header() {
   const [searchOpen, setSearchOpen] = useState(false);
 
-  const [search, setSearch] = useState('');
+  const [search, setSearch] = useState('watch');
 
   const location = useLocation();
-  const { mutate } = useMutation(NewsApi.getNews);
-
-  const handleSearch = () => {
-    mutate({ q: search });
-  };
-
-  useEffect(() => {
-    handleSearch();
-  }, [search]);
+  const { refetch } = useQuery('remote', async () => {
+    const response = await NewsApi.getNews(search);
+    return response?.data?.articles || [];
+  });
 
   return (
     <Container>
@@ -48,7 +43,12 @@ function Header() {
       </section>
       <Search className={searchOpen ? 'open' : ''}>
         <FiSearch size={20} color="black" />
-        <input placeholder="Search..." value={search} onChange={(e) => setSearch(e.target.value)} />
+        <div className="input-holder">
+          <input placeholder="Search..." value={search} onChange={(e) => setSearch(e.target.value)} />
+          <button onClick={refetch}>
+            Search
+          </button>
+        </div>
         <button onClick={() => setSearchOpen(false)}>
           <FiX size={20} color="black" />
         </button>
