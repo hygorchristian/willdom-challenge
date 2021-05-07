@@ -10,6 +10,7 @@ export const Container = styled.header`
   align-items: center;
   justify-content: center;
   position: fixed;
+  position: relative;
   
   section{
     flex-direction: row;
@@ -54,6 +55,10 @@ export const Container = styled.header`
             display: block;
           }
             
+          a{
+            color: black;
+            text-decoration: none;
+          }
         }
       }
       
@@ -80,6 +85,29 @@ export const Container = styled.header`
   }  
 `;
 
-export const Main = styled.main`
+export const Search = styled.div`
+  position: absolute;
+  align-self: center;
+  height: 56px;
+  width: 600px;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  top: -56px;
+  transition: all 250ms ease;
   
+  &.open{
+    top: 0;
+  }
+  
+  
+  input{
+    height: 32px;
+    flex: 1;
+    border-radius: 4px;
+    border: 1px solid #909090;
+    margin: 0 8px;
+    padding: 0 12px;
+  }
 `;
