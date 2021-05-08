@@ -23,5 +23,9 @@ module.exports = {
     'jsx-a11y/anchor-is-valid': 'off',
     'react/jsx-props-no-spreading': 'off',
     'react/button-has-type': 'off',
+    'no-restricted-syntax': 'off',
+    'no-await-in-loop': 'off',
+    'react/require-default-props': 'off',
+    'import/prefer-default-export': 'off',
   },
 };

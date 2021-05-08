@@ -9,12 +9,13 @@ import Footer from '../../components/Footer';
 
 import Container from './styles';
 import NoItems from '../../components/NoItems';
+import { slug } from '../../utils/slug';
 
 function Remote() {
   const { data } = useQuery('remote');
 
   return (
-    <Container>
+    <Container data-testid="remote-news">
       <Header />
       <InfiniteScroll
         dataLength={2}
@@ -23,7 +24,10 @@ function Remote() {
       >
         <div className="content">
           <section>
-            {data?.map((item) => <NewsItem key={Math.random()} item={item} />)}
+            {data?.map((item) => {
+              const id = slug(item.title);
+              return <NewsItem data-testid={id} key={id} item={item} />;
+            })}
           </section>
         </div>
       </InfiniteScroll>

@@ -6,7 +6,11 @@ class News{
   }
 
   getNews = () => new Promise(resolve => {
-    resolve(this.mocks)
+    resolve({
+      data: {
+        articles: this.mocks
+      }
+    })
   });
 }
 

@@ -8,16 +8,20 @@ import LocalNews from '../../services/localNews';
 
 import Container from './styles';
 import NoItems from '../../components/NoItems';
+import { slug } from '../../utils/slug';
 
-function App() {
+function Local() {
   const [data] = useState(LocalNews.news);
 
   return (
-    <Container>
+    <Container data-testid="local-news">
       <Header />
       <div className="content">
         <section>
-          {data?.map((item) => <NewsItem key={Math.random()} item={item} />)}
+          {data?.map((item) => {
+            const id = slug(item.title);
+            return <NewsItem data-testid={id} key={id} item={item} />;
+          })}
         </section>
       </div>
       {(!data || !data?.length) && <NoItems />}
@@ -27,4 +31,4 @@ function App() {
   );
 }
 
-export default App;
+export default Local;
