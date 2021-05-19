@@ -27,5 +27,6 @@ module.exports = {
     'no-await-in-loop': 'off',
     'react/require-default-props': 'off',
     'import/prefer-default-export': 'off',
+    'jsx-a11y/label-has-associated-control': 'off',
   },
 };

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, memo } from 'react';
 import { FiSearch, FiX } from 'react-icons/fi';
 import { useLocation } from 'react-router-dom';
 import { useQuery } from 'react-query';
@@ -20,6 +20,8 @@ function Header() {
   const { refetch } = useQuery('remote', async () => {
     const response = await NewsApi.getNews(search);
     return response?.data?.articles || [];
+  }, {
+    retry: false,
   });
 
   return (
@@ -61,4 +63,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default memo(Header);
